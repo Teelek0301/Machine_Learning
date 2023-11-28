@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Category Prediction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MLDV project for predicting the category of purchases">
+  <style>
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #000000;
+    }
+
+    header {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    section {
+      text-align: center;
+      margin: 20px;
+    }
+
+    form {
+  display: inline-block;
+  text-align: center; /* Center the form content */
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+    input {
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    
+
+    p {
+      font-family: Georgia, serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: normal;
+      color: #000000;
+      background-color: #ffffff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Category Prediction</h1>
+    <h2>This is my MLDV project where I will be predicting the category bought</h2>
+  </header>
+
+  <section>
+    <form action="/predict" method="post">
+      <input type="text" name="price_median" placeholder="How much spent" required><br>
+      <input type="text" name="quantity" placeholder="How many items bought" required><br>
+      <input type="text" name="age" placeholder="Age" required><br>
+      <button type="submit">Predict Category</button>
+    </form>
+  </section>
+
+  <p>{{ Category_Prediction }}</p>
+</body>
+</html>
